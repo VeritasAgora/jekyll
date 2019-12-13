@@ -1,0 +1,24 @@
+<!-- Nav -->
+  	<section id="browse-categories" class="hidden">
+	    <div class="owl-carousel">
+			
+			<div class="main_category">
+				<div class="overlay"> 
+					<img class="lazy-loaded" data-src="/assets/images/arrow.jpg"  src="/assets/images/arrow.jpg"/>
+					<noscript><img src="/assets/images/arrow.jpg"/></noscript>
+				</div>
+				<div class="title"><img id="cursor" src="/assets/images/cursor.png"></div>
+			</div>
+			
+			{% for category-listing in site.data.categories.category-listing %}
+			<div class="main_category">
+				<div class="overlay"> 
+					<img class="lazy-loaded" data-src="{{ category-listing.image }}" src="{{ category-listing.image }}"/>
+					<noscript><img src="{{ category-listing.image }}"/></noscript>
+				</div>
+				<a href="/{{ category-listing.name | slugify }} "><div class="title"><h3 class="category-title">{{ category-listing.name }}</h3></div></a>
+			</div>
+			{% endfor %}
+
+		</div>
+	</section>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+    
+    {% include head.html %}
+
+	<body>
+	
+    {% include nav.html %}
+
+	{% include header.html %} 
+	 
+	{% include info.html %}
+	
+	{% include search.html %}
+
+	<section class="post-wrapper">
+        <div class="post-media">
+			{% for entry in page.images %}
+			<figure>
+                <img src="{{ entry.file }}" alt="">
+			</figure>
+			{% endfor %}
+        </div>	
+
+		<div class="post-content">
+			
+			<div class="attribution">
+				<img class="avatar" src="{{ page.avatar }}" alt="">
+				<h3 class="author">{{ page.author }}</h3>
+				<span>Contributor</span>
+			</div>
+
+			<h1>{{ page.title }}</h1>
+			
+			{{ content }}
+
+			{% if page.citations %}
+			<h3 class="citations-header">Works Cited</h3>
+			<ul class="citations-body">
+				{% for source in page.citations %}
+				<li><strong>{{ source.title }}</strong>{% if source.author %} by {{ source.author }}{% endif %}{% if source.publication %} from <em>{{ source.publication }}</em>{% endif %}<br>{% if source.link %}<a href="https://{{ source.link }}" target="_blank">{{ source.link }}</a>{% endif %}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+
+			<div class="post-meta">
+				<div class="date">Posted {{ page.date | date: "%b %-d, %Y" }} in {{ page.category }}</div>
+				<div class="socbtn">
+					<span class="share">
+						<a class="share-anchor" href="https://www.facebook.com/dialog/share?app_id=359923804846150&display=popup&href={{ site.url }}{{ site.baseurl }}{{ page.url }}" target="_blank"><span class="icon-facebook"></span></a>
+						<a class="share-anchor" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ site.baseurl }}{{ page.url }}" target="_blank"><span class="icon-twitter"></span></a>
+					</span>
+				</div>
+			</div>
+			{% if page.comments %}
+			<div id="disqus_thread"></div>
+			<script>
+			/**
+			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+			**/
+			var disqus_config = function () {
+			this.page.url = "{{ site.url }}{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+			/*this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+			};
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://{{ site.disqus_site_name }}.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			{% endif %}
+		</div>
+		
+	</section>
+
+	<section>
+		<nav role="navigation">
+			<ul class="pagination">
+				{% if page.next.url %}
+				<li class="button"><a class="prev" href="{{ page.next.url }}">&lsaquo; prev post</a></li>
+				{% endif %}
+				{% if page.previous.url %}
+				<li class="button"><a class="next" href="{{ page.previous.url }}">next post &rsaquo;</a></li>
+				{% endif %}
+			</ul>
+		</nav>  
+	</section>
+
+    {% include footer.html %}
+ 	
+	</body>
+</html>

@@ -1,0 +1,55 @@
+.attribution {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.author {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.avatar {
+    height: 50px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+blockquote {
+    padding-left: 20px;
+    border-left: 5px solid #FDBB30;
+}
+.category-header-text {
+   font-size: 18px !important;
+}
+.category-title {
+    margin: 5px;
+}
+.citations-header {
+    font-size: 24px !important;
+    margin-bottom: 20px;
+}
+.citations-body {
+    font-size: 16px !important;
+}
+#cursor {
+    width: 30%;
+    margin: auto;
+}
+#cursor:hover {
+    width: 40%;
+}
+.gsc-search-button-v2 {
+    margin-top: 0px !important;
+    font-size: 18px !important;
+}
+.gsc-control-cse {
+    padding-top: 0px !important;
+}
+.info-modal-close {
+    text-decoration: none !important;
+}
+#search-wrapper {
+    max-width: 95%;
+    margin: auto;
+}
+.share-anchor {
+    text-decoration: none;
+}

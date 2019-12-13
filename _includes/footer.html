@@ -1,0 +1,24 @@
+<!-- Footer -->
+<footer class="footer">
+    <nav class="socials">
+        <ul>
+            {% if site.twitter %}
+            <li><a href="https://twitter.com/{{ site.twitter }}" target="_blank"><span class="icon-twitter"></span></a></li>
+            {% endif %}
+            {% if site.instagram %}
+            <li><a href="https://www.instagram.com/{{ site.instagram }}" target="_blank"><span class="icon-instagram"></span></a></li>
+            {% endif %}
+            {% if site.facebook %}
+            <li><a href="https://www.facebook.com/{{ site.facebook }}" target="_blank"><span class="icon-facebook"></span></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <a href="#" class="back-to-top">
+	    <span class="icon-arrow"></span>
+	</a>
+	<div class="copyright">
+        <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc8NdNjysTQwEDnJdd4Q2CSbtALlg7cetoYo8pLOYUeHh7VFg/viewform" target="_blank">Contribute</a></li>
+        </ul>
+    </div> 
+</footer>

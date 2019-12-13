@@ -1,0 +1,69 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Veritas Agora
+email: agora@veritaspress.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Veritas Agora is designed to build a community of enthusiastic readers and passionate writers who share this love for ideas.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://agora.veritaspress.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Visual settings
+color: "#005789"
+
+twitter: veritaspress
+instagram: veritaspress
+facebook: veritaspress
+
+disqus_site_name: veritas-agora
+
+# Build settings
+markdown: kramdown
+include: [_redirects]
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page/:num/'
+  title: ':title - :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+autopages:
+  enabled: true
+  categories:
+    title: ':cat'
+    permalink: '/:cat'
+  collections:
+    enabled: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

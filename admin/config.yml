@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+publish_mode: editorial_workflow
+media_folder: "uploads" # Media files will be stored in the repo under uploads
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Category", name: "category", widget: "select", options: ["Art", "Authorship", "Education", "Entertainment", "Entrepreneurship", "History", "Math", "News", "Philosophy", "Science", "Theology", "Travel", "Wellbeing"]}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Avatar", name: "avatar", widget: "image"}
+      - {label: "Enable Comments", name: "comments", widget: "boolean", default: true}
+      - {label: "Hide Post", name: "hidden", widget: "boolean", default: false}
+      - {label: "MathJax", name: "mathjax", widget: "boolean", default: false}
+      - name: "images"
+        label: "Images"
+        widget: "list"
+        fields:
+          - {label: "File", name: "file", widget: "image"}
+      - {label: Body, name: body, widget: "markdown"}
+      - name: "citations"
+        label: "Citations"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Source Title", name: "title", widget: "string"}
+          - {label: "Source Author", name: "author", widget: "string"}
+          - {label: "Source Publication", name: "publication", widget: "string"}
+          - {label: "Source Link", name: "link", widget: "string"}

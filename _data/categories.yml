@@ -1,0 +1,27 @@
+category-listing:
+  - name: Art
+    image: /assets/images/categories/brushes.jpg
+  - name: Authorship
+    image: /assets/images/categories/typewriter.jpg
+  - name: Education
+    image: /assets/images/categories/classroom.jpg
+  - name: Entertainment
+    image: /assets/images/categories/theater.jpg
+  - name: Entrepreneurship
+    image: /assets/images/categories/skyscrapers.jpg
+  - name: History
+    image: /assets/images/categories/library.jpg
+  - name: Math
+    image: /assets/images/categories/abacus.jpg
+  - name: News
+    image: /assets/images/categories/flaming-newspaper.jpg
+  - name: Philosophy
+    image: /assets/images/categories/bust.jpg
+  - name: Science
+    image: /assets/images/categories/beakers.jpg
+  - name: Theology
+    image: /assets/images/categories/cathedral.jpg
+  - name: Travel
+    image: /assets/images/categories/map.jpg
+  - name: Wellbeing
+    image: /assets/images/categories/cliff.jpg

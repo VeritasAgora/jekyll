@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+
+    {% include head.html %}
+
+	<body>
+
+    {% include nav.html %}
+
+	{% include header.html %}
+
+	{% include info.html %}
+	
+	{% include search.html %}
+
+	<section class="post-container">
+
+		<!-- This loops through the paginated posts -->
+		{% for post in paginator.posts %}
+		
+		<article class="post-item grid-sizer">
+			<header>
+				<div class="post-image">
+					{% for entry in post.images limit:1 %}
+					<img src="{{ entry.file }}" alt="image" />
+					{% endfor %}
+				</div>
+
+				<a href="{{ post.url | relative_url }}">
+					<div class="post-overlay">
+						<div class="post-logo">
+							<img src="/assets/images/logo-hover.png" width="151" height="177" alt="Veritas Logo" />
+						</div>
+					</div>
+				</a>
+			</header>
+
+			<footer>
+				<h3>{{ post.title }}</h3>
+				<div class="post-content">
+					<p>{{ post.excerpt | strip_html | truncate: 75 }}</p>
+				</div>
+				<div class="post-meta">
+					<ul>
+						<li class="author">{{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</li>
+					</ul>
+				</div>
+			</footer>
+		</article>
+		
+		{% endfor %}
+
+	</section>
+
+	<section>
+		<nav role="navigation">
+			<ul class="pagination">
+				{% if paginator.previous_page %}
+				<li class="button"><a class="prev" href="{{ paginator.previous_page_path }}">&lsaquo; prev page</a></li>
+				{% endif %}
+				{% if paginator.next_page %}
+				<li class="button"><a class="next" href="{{ paginator.next_page_path }}">next page &rsaquo;</a></li>
+				{% endif %}
+			</ul>
+		</nav>
+	</section>
+
+    {% include footer.html %}
+
+	</body>
+</html>

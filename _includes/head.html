@@ -1,0 +1,50 @@
+<head>
+  <title>{% if page.autopages %}{{ page.autopages.display_name }}{% else %}{{ page.title }}{% endif %} - {{ site.title }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="{{ site.color }}">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+  <!-- Scripts -->
+	<script src="/assets/js/main.min.js"></script>
+  <script src="/assets/js/modernizr.custom.js"></script>
+  <script src="/assets/js/custom.js"></script>
+  <script src="https://cse.google.com/cse.js?cx=016736738693351353834:qd1qqeahnvm"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% if page.mathjax %}
+  <!-- MathJax, for the mathiest of persons -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['::', '::']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  {% endif %}
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicomatic/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicomatic/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicomatic/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicomatic/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicomatic/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicomatic/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicomatic/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicomatic/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/favicomatic/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/favicomatic/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/favicomatic/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="Aduantas"/>
+  <meta name="msapplication-TileColor" content="#717981" />
+  <meta name="msapplication-TileImage" content="/favicomatic/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/favicomatic/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/favicomatic/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/favicomatic/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/favicomatic/mstile-310x310.png" />
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ site.baseurl }}{{ page.url }}">
+</head>
