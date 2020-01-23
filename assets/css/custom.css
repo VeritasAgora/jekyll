@@ -36,6 +36,11 @@ blockquote {
 #cursor:hover {
     width: 40%;
 }
+.divider {
+    margin-right: 2px;
+    padding-right: 8px;
+    border-right: 1px solid black;
+}
 .gsc-search-button-v2 {
     margin-top: 0px !important;
     font-size: 18px !important;
@@ -52,4 +57,23 @@ blockquote {
 }
 .share-anchor {
     text-decoration: none;
+}
+.trigger-info-modal {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 14px !important;
+}
+.trigger-info-modal .top {
+    display: block;
+    line-height: 1.2;
+}
+.trigger-info-modal .bottom {
+    display: block;
+    font-weight: bold;
+    line-height: 1.2;
+}
+@media (max-width: 480px) {
+    .cta {
+        display: none;
+    }
 }
