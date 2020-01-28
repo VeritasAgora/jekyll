@@ -77,3 +77,8 @@ blockquote {
         display: none;
     }
 }
+@media (max-width: 768px) {
+    .logo-text {
+        display: none;
+    }
+}
