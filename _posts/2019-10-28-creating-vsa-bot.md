@@ -2,7 +2,7 @@
 layout: post
 title: Creating VSA Bot
 date: '2019-10-28'
-category: Science
+category: STEM
 author: Ben Beehler
 avatar: /uploads/beehler-avatar.jpg
 comments: true

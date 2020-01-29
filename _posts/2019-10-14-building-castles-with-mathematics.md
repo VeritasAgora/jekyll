@@ -2,7 +2,7 @@
 layout: post
 title: Building Castles With Mathematics
 date: '2019-10-14'
-category: Science
+category: STEM
 author: Andrea McCabe
 avatar: /uploads/mccabe-avatar.jpg
 comments: true

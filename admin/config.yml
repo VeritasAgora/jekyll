@@ -12,7 +12,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "date"}
-      - {label: "Category", name: "category", widget: "select", options: ["Art", "Authorship", "Education", "Entertainment", "Entrepreneurship", "History", "Math", "News", "Philosophy", "Science", "Theology", "Travel", "Wellbeing"]}
+      - {label: "Category", name: "category", widget: "select", options: ["Art", "Authorship", "Education", "Entertainment", "Entrepreneurship", "History", "Math", "News", "Philosophy", "STEM", "Theology", "Travel", "Wellbeing"]}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Avatar", name: "avatar", widget: "image"}
       - {label: "Enable Comments", name: "comments", widget: "boolean", default: true}
