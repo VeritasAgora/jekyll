@@ -32,6 +32,7 @@ disqus_site_name: veritas-agora
 # Build settings
 markdown: kramdown
 include: [_redirects]
+permalink: /:categories/:title
 
 # Pagination Settings
 pagination:
