@@ -11,8 +11,6 @@ category-listing:
     image: /assets/images/categories/skyscrapers.jpg
   - name: History
     image: /assets/images/categories/library.jpg
-  - name: Math
-    image: /assets/images/categories/abacus.jpg
   - name: News
     image: /assets/images/categories/flaming-newspaper.jpg
   - name: Philosophy
